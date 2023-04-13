@@ -1,2 +1,2 @@
-# Galaxy-Classicube
-My Custom Classicube Client
+# Galaxy Classicube
+This is my custom Classicube Client, Information to compile it will be coming soon, once I upload the files...
