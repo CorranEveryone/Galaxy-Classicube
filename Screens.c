@@ -82,7 +82,7 @@ static void HUDScreen_UpdateLine1(struct HUDScreen* s) {
 	int fps = (int)(s->frames / s->accumulator);
 
 	String_InitArray(status, statusBuffer);
-	String_Format1(&status, "%a%i %2fps%f, ", &fps);
+	String_Format1(&status, "%dGalaxy %fClassi%7cube %f| %a%i %2fps%f | ", &fps);
 	/* Don't remake texture when FPS isn't being shown */
 	if (!Gui.ShowFPS && s->line1.tex.ID) return;
 
@@ -90,14 +90,14 @@ static void HUDScreen_UpdateLine1(struct HUDScreen* s) {
 		String_Format1(&status, "%d%i %5chunk updates%f", &Game.ChunkUpdates);
 	} else {
 		if (Game.ChunkUpdates) {
-			String_Format1(&status, "%d%i %5chunks/s%f, ", &Game.ChunkUpdates);
+			String_Format1(&status, "%d%i %5chunks/s%f | ", &Game.ChunkUpdates);
 		}
 
 		indices = ICOUNT(Game_Vertices);
 		String_Format1(&status, "%b%i %3vertices%f", &indices);
 
 		ping = Ping_AveragePingMS();
-		if (ping) String_Format1(&status, ", %6ping %e%i %6ms%f", &ping);
+		if (ping) String_Format1(&status, " | %6ping %e%i %6ms%f", &ping);
 	}
 	TextWidget_Set(&s->line1, &status, &s->font);
 }
