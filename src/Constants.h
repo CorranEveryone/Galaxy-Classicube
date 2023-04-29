@@ -10,18 +10,18 @@ Copyright 2014-2022 ClassiCube | Licensed under BSD-3
 #define GAME_API_VER 1
 
 #if defined CC_BUILD_WEB
-#define GAME_APP_ALT   "ClassiCube 1.3.5 web mobile"
-#define GAME_APP_NAME  "ClassiCube 1.3.5 web"
-#define GAME_APP_TITLE "ClassiCube"
+#define GAME_APP_ALT   "Classicube 1.3.5 + Galaxy ClassiCube BETA web mobile"
+#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA web"
+#define GAME_APP_TITLE "Galaxy ClassiCube"
 #elif defined CC_BUILD_ANDROID
-#define GAME_APP_NAME  "ClassiCube 1.3.5 android alpha"
-#define GAME_APP_TITLE "ClassiCube 1.3.5 android alpha"
+#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA android alpha"
+#define GAME_APP_TITLE "Galaxy ClassiCube BETA android alpha"
 #elif defined CC_BUILD_IOS
-#define GAME_APP_NAME  "ClassiCube 1.3.5 iOS alpha"
-#define GAME_APP_TITLE "ClassiCube 1.3.5 iOS alpha"
+#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA iOS alpha"
+#define GAME_APP_TITLE "Galaxy ClassiCube BETA iOS alpha"
 #else
-#define GAME_APP_NAME  "ClassiCube 1.3.5"
-#define GAME_APP_TITLE "ClassiCube 1.3.5"
+#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA"
+#define GAME_APP_TITLE "Galaxy ClassiCube BETA"
 #endif
 
 /* Max number of characters strings can have. */
@@ -52,7 +52,7 @@ Copyright 2014-2022 ClassiCube | Licensed under BSD-3
 #define GAME_DEF_TICKS (1.0 / 20)
 #define GAME_NET_TICKS (1.0 / 60)
 
-#define GUI_MAX_CHATLINES 30
+#define GUI_MAX_CHATLINES 50
 
 enum FACE_CONSTS {
 	FACE_XMIN = 0, /* Face X = 0 */
@@ -75,7 +75,7 @@ enum SKIN_TYPE { SKIN_64x32, SKIN_64x64, SKIN_64x64_SLIM, SKIN_INVALID = 0xF0 };
 
 /* Skins were moved to use Amazon S3, so link directly to avoid a pointless redirect */
 #define SKINS_SERVER    "http://cdn.classicube.net/skin"
-#define UPDATES_SERVER  "http://cs.classicube.net/client"
+#define UPDATES_SERVER  ""
 #define SERVICES_SERVER "https://www.classicube.net/api"
 #define RESOURCE_SERVER "http://static.classicube.net"
 /* Webpage where users can register for a new account */
