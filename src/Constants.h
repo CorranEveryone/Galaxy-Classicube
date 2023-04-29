@@ -10,17 +10,17 @@ Copyright 2014-2022 ClassiCube | Licensed under BSD-3
 #define GAME_API_VER 1
 
 #if defined CC_BUILD_WEB
-#define GAME_APP_ALT   "Classicube 1.3.5 + Galaxy ClassiCube BETA web mobile"
-#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA web"
+#define GAME_APP_ALT   "ClassiCube 1.3.5 + Galaxy ClassiCube BETA web mobile"
+#define GAME_APP_NAME  "ClassiCube 1.3.5 + Galaxy ClassiCube BETA web"
 #define GAME_APP_TITLE "Galaxy ClassiCube"
 #elif defined CC_BUILD_ANDROID
-#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA android alpha"
+#define GAME_APP_NAME  "ClassiCube 1.3.5 + Galaxy ClassiCube BETA android alpha"
 #define GAME_APP_TITLE "Galaxy ClassiCube BETA android alpha"
 #elif defined CC_BUILD_IOS
-#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA iOS alpha"
+#define GAME_APP_NAME  "ClassiCube 1.3.5 + Galaxy ClassiCube BETA iOS alpha"
 #define GAME_APP_TITLE "Galaxy ClassiCube BETA iOS alpha"
 #else
-#define GAME_APP_NAME  "Classicube 1.3.5 + Galaxy ClassiCube BETA"
+#define GAME_APP_NAME  "ClassiCube 1.3.5 + Galaxy ClassiCube BETA"
 #define GAME_APP_TITLE "Galaxy ClassiCube BETA"
 #endif
 
