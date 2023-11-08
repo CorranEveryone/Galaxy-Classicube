@@ -1,0 +1,5 @@
+https://github.com/UnknownShadow200/ClassiCube/commit/d04c19ea4bca7c4e79bf6091444d1404df4b117f
+
+Start moving entity model rendering away from Gfx_SetDynamicVBData
+
+Release 1.3.6 Build

@@ -1,0 +1,27 @@
+name: Build
+
+on: [push, pull_request]
+
+  build_on_windows:
+    name: Build ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit) on Windows
+    runs-on: windows-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - { plat: "Windows", bits: 64 }
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      # Build
+      - name: Build for ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit)
+        if: matrix.config.plat == 'Windows' && matrix.config.bits == 64
+        run: |
+          msbuild src\ClassiCube.vcxproj `
+            -property:Configuration=Debug -property:Platform=x64 `
+            -property:WindowsTargetPlatformVersion=10 -property:PlatformToolset=v142
