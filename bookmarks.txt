@@ -1,0 +1,6 @@
+File: "src/Screens.c"
+Line: {
+    96, "Line 1 (FPS, Chunks/s, Verticies, Ping)",
+    165, "Line 3 (Hacks)",
+    189, "Line 2 (Position)",
+}

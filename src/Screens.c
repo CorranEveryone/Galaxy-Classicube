@@ -81,7 +81,7 @@ static struct HUDScreen {
 /* Each integer can be at most 10 digits + minus prefix */
 #define POSITION_VAL_CHARS 11
 /* [PREFIX] [(] [X] [,] [Y] [,] [Z] [)] */
-#define POSITION_HUD_CHARS (1 + 1 + POSITION_VAL_CHARS + 1 + POSITION_VAL_CHARS + 1 + POSITION_VAL_CHARS + 1)
+#define POSITION_HUD_CHARS (1 + 1 + "&f" + POSITION_VAL_CHARS + 1 + "&f" + POSITION_VAL_CHARS + 1 + "&f" + POSITION_VAL_CHARS + "&f" + 1)
 #define HUD_MAX_VERTICES (4 + TEXTWIDGET_MAX * 2 + HOTBAR_MAX_VERTICES + POSITION_HUD_CHARS * 4)
 
 static void HUDScreen_RemakeLine1(struct HUDScreen* s) {
@@ -93,20 +93,20 @@ static void HUDScreen_RemakeLine1(struct HUDScreen* s) {
 	if (!Gui.ShowFPS && s->line1.tex.ID) return;
 
 	fps = s->accumulator == 0 ? 1 : (int)(s->frames / s->accumulator);
-	String_Format1(&status, "%i fps, ", &fps);
+	String_Format1(&status, "&fGalaxy &fClassi&fCube &f| &f%i &ffps", &fps);
 
 	if (Game_ClassicMode) {
-		String_Format1(&status, "%i chunk updates", &Game.ChunkUpdates);
+		String_Format1(&status, " &f| &f%i &fchunk updates", &Game.ChunkUpdates);
 	} else {
 		if (Game.ChunkUpdates) {
-			String_Format1(&status, "%i chunks/s, ", &Game.ChunkUpdates);
+			String_Format1(&status, " &f| &f%i &fchunks/s", &Game.ChunkUpdates);
 		}
 
 		indices = ICOUNT(Game_Vertices);
-		String_Format1(&status, "%i vertices", &indices);
+		String_Format1(&status, " &f| &f%i &fvertices", &indices);
 
 		ping = Ping_AveragePingMS();
-		if (ping) String_Format1(&status, ", ping %i ms", &ping);
+		if (ping) String_Format1(&status, " &f| &fping &f%i &fms", &ping);
 	}
 	TextWidget_Set(&s->line1, &status, &s->font);
 	s->dirty = true;
@@ -162,12 +162,12 @@ static void HUDScreen_RemakeLine2(struct HUDScreen* s) {
 
 	String_InitArray(status, statusBuffer);
 	if (Camera.Fov != Camera.DefaultFov) {
-		String_Format1(&status, "Zoom fov %i  ", &Camera.Fov);
+		String_Format1(&status, "&f[&fZoom fov &f%i&f] ", &Camera.Fov);
 	}
 
-	if (hacks->Flying) String_AppendConst(&status, "Fly ON   ");
-	if (speed)         String_Format1(&status, "Speed %f1x   ", &speed);
-	if (hacks->Noclip) String_AppendConst(&status, "Noclip ON   ");
+	if (hacks->Flying) String_AppendConst(&status, "&f[&fFly ON&f] ");
+	if (speed)         String_Format1(&status, "&f[&fSpeed &f%f1x&f] ", &speed);
+	if (hacks->Noclip) String_AppendConst(&status, "&f[&fNoclip ON&f] ");
 
 	TextWidget_Set(&s->line2, &status, &s->font);
 }
@@ -186,7 +186,7 @@ static void HUDScreen_ContextLost(void* screen) {
 
 static void HUDScreen_ContextRecreated(void* screen) {	
 	static const cc_string chars  = String_FromConst("0123456789-, ()");
-	static const cc_string prefix = String_FromConst("Position: ");
+	static const cc_string prefix = String_FromConst("&fPosition&f: ");
 
 	struct HUDScreen* s = (struct HUDScreen*)screen;
 	Screen_UpdateVb(s);
