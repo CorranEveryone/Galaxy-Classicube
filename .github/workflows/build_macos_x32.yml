@@ -21,5 +21,4 @@ jobs:
       - name: Build for ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit)
         if: matrix.config.plat == 'Mac' && matrix.config.bits == 32
         run: |
-          cd src
           make mac_x32

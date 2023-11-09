@@ -31,5 +31,4 @@ jobs:
       - name: Build for ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit)
         if: matrix.config.plat == 'Windows' && matrix.config.bits == 32
         run: |
-          cd src
           make mingw CC="i686-w64-mingw32-gcc"

@@ -31,6 +31,5 @@ jobs:
       - name: Build for ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit)
         if: matrix.config.plat == 'Linux' && matrix.config.bits == 32
         run: |
-          cd src
           # Note, this overwrites the previous flags
           make linux CFLAGS="-m32" LDFLAGS="-m32"
