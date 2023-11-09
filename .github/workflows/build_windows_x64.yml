@@ -29,5 +29,5 @@ jobs:
 
       - uses: ./.github/actions/upload_build
         with:
-          SOURCE_FILE: 'ClassiCube.exe'
+          SOURCE_FILE: 'src\x64\Debug\ClassiCube.exe'
           DEST_NAME: 'ClassiCube.exe'
