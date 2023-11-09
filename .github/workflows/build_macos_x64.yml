@@ -21,3 +21,8 @@ jobs:
         if: matrix.config.plat == 'Mac' && matrix.config.bits == 64
         run: |
           make mac_x64
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'src\x64\Debug\ClassiCube.app'
+          DEST_NAME: 'ClassiCube.app'
