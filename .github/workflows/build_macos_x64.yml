@@ -20,5 +20,4 @@ jobs:
       - name: Build for ${{ matrix.config.plat }} (${{ matrix.config.bits }} bit)
         if: matrix.config.plat == 'Mac' && matrix.config.bits == 64
         run: |
-          cd src
           make mac_x64
