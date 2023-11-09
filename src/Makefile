@@ -53,6 +53,8 @@ LDFLAGS=-rdynamic -framework Carbon -framework AGL -framework OpenGL -framework 
 endif
 
 ifeq ($(PLAT),mac_x64)
+OBJECTS+=src/interos_cocoa.o
+OBJECTS+=src/interos_cocoa.m
 CFLAGS=-g -m64 -pipe -fno-math-errno
 LIBS=
 LDFLAGS=-rdynamic -framework Cocoa -framework OpenGL -framework IOKit -lobjc
