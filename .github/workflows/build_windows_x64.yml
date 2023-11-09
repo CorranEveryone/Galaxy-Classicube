@@ -1,4 +1,4 @@
-name: Build
+name: Build latest (Windows x64)
 
 on: [push, pull_request]
 
@@ -26,3 +26,8 @@ jobs:
           msbuild src\ClassiCube.vcxproj `
             -property:Configuration=Debug -property:Platform=x64 `
             -property:WindowsTargetPlatformVersion=10 -property:PlatformToolset=v142
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'ClassiCube.exe'
+          DEST_NAME: 'ClassiCube.exe'
