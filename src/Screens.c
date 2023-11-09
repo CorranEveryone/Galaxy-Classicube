@@ -81,7 +81,7 @@ static struct HUDScreen {
 /* Each integer can be at most 10 digits + minus prefix */
 #define POSITION_VAL_CHARS 11
 /* [PREFIX] [(] [X] [,] [Y] [,] [Z] [)] */
-#define POSITION_HUD_CHARS (1 + 1 + "&f" + POSITION_VAL_CHARS + 1 + "&f" + POSITION_VAL_CHARS + 1 + "&f" + POSITION_VAL_CHARS + "&f" + 1)
+#define POSITION_HUD_CHARS (1 + 1 + POSITION_VAL_CHARS + 1 + POSITION_VAL_CHARS + 1 + POSITION_VAL_CHARS + 1)
 #define HUD_MAX_VERTICES (4 + TEXTWIDGET_MAX * 2 + HOTBAR_MAX_VERTICES + POSITION_HUD_CHARS * 4)
 
 static void HUDScreen_RemakeLine1(struct HUDScreen* s) {
