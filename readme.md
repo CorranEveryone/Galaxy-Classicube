@@ -5,7 +5,7 @@ At the moment, Galaxy Classicube has been updated to the latest version of Class
 
 I will show screenshots soon.
 
-## Downloads
+## Downloads Developer Builds
 
 ### Windows
 Windows x64
