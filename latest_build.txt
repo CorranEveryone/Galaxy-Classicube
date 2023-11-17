@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/f9525efaf5771f9233cc86dcdce1e5da239c3296
+https://github.com/UnknownShadow200/ClassiCube/commit/f0f01b7d6d8d42b3a000672120db88bb1ae7120a
 
-Merge pull request #1094 from UnknownShadow200/GfxRewrite2
+Start moving towards supporting per-entity model vertex buffers
 Nov 9, 2023
 
 Release 1.3.6 Build
