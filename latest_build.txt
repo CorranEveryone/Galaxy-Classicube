@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/066bb0f67eee5a16bd19314ba622e05d2c89a51a
+https://github.com/UnknownShadow200/ClassiCube/commit/071b14f02d4f5e99818df0d8d3471c974c7fe82b
 
-Disable custom models on consoles
+Consoles: Switch to per entity model vertex buffers
 Nov 11, 2023
 
 Release 1.3.6 Build
