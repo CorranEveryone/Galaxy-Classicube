@@ -1,7 +1,7 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/071b14f02d4f5e99818df0d8d3471c974c7fe82b
+https://github.com/UnknownShadow200/ClassiCube/commit/df9eb0c4bf19986e355c73e70fee845e1b743e95
 
-Consoles: Switch to per entity model vertex buffers
-Nov 11, 2023
+Try to fix crashes when running with CEF plugin since 066bb0f
+Nov 12, 2023
 
 Release 1.3.6 Build
 
