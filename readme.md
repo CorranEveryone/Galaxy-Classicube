@@ -8,39 +8,44 @@ I will show screenshots soon.
 ## Downloads Developer Builds
 
 ### Windows
-Windows x64
+Windows x64 - Missing 2 dll files [HELP NEEDED]
 
-Windows x32
+Windows x32 - [Untested]
 
 ### MacOS
-MacOS x64 - Currently Creating No Artifacts
+MacOS x64 - Currently Creating No Artifacts [Untested]
 
-MacOS x32 - Build Doesn't Work (Same for Vanilla Classicube)
+MacOS x32 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
+
+### Mobile
+iOS - No Github Action [Untested]
+
+Android - No Github Action [Untested]
 
 ### Ubuntu Linux
-Ubuntu Linux x64 - Currently Creating No Artifacts
+Ubuntu Linux x64 - Currently Creating No Artifacts [Untested]
 
-Ubuntu Linux x32 - Currently Creating No Artifacts
+Ubuntu Linux x32 - Currently Creating No Artifacts [Untested]
 
-Ubuntu Windows x64 - Currently Creating No Artifacts
+Ubuntu Windows x64 - Currently Creating No Artifacts [Untested]
 
-Ubuntu Windows x32 - Currently Creating No Artifacts
+Ubuntu Windows x32 - Currently Creating No Artifacts [Untested]
 
 ### PlayStations Devices
-PSP
+PSP - [Untested]
 
-PS Vita
+PS Vita - [Untested]
 
-PS3 - Build Doesn't Work (Same for Vanilla Classicube)
+PS3 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
 
 ### Nintendo Devices
-3DS
+3DS - [Untested]
 
-Wii/GameCube
+Wii/GameCube - [Untested]
 
 ### Misc. Devices
-Dreamcast
+Dreamcast - [Untested]
 
-Haiku
+Haiku - [Untested]
 
-Xbox
+Xbox - [Untested]
