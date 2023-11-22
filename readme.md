@@ -10,26 +10,26 @@ I will show screenshots soon.
 ### Windows
 Windows x64 - Missing 2 dll files [HELP NEEDED]
 
-Windows x32 - [Untested]
+Windows x32 - Missing 2 dll files [HELP NEEDED]
 
 ### MacOS
-MacOS x64 - Currently Creating No Artifacts [Untested]
+MacOS x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
 MacOS x32 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
 
 ### Mobile
-iOS - No Github Action [Untested]
+iOS - No Github Action [Untested] [HELP NEEDED]
 
-Android - No Github Action [Untested]
+Android - No Github Action [Untested] [HELP NEEDED]
 
 ### Ubuntu Linux
-Ubuntu Linux x64 - Currently Creating No Artifacts [Untested]
+Ubuntu Linux x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
-Ubuntu Linux x32 - Currently Creating No Artifacts [Untested]
+Ubuntu Linux x32 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
-Ubuntu Windows x64 - Currently Creating No Artifacts [Untested]
+Ubuntu Windows x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
-Ubuntu Windows x32 - Currently Creating No Artifacts [Untested]
+Ubuntu Windows x32 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
 ### PlayStations Devices
 PSP - [Untested]
@@ -38,10 +38,14 @@ PS Vita - [Untested]
 
 PS3 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
 
+PS2 - No Github Action [Untested] [HELP NEEDED]
+
 ### Nintendo Devices
 3DS - [Untested]
 
 Wii/GameCube - [Untested]
+
+N64 - No Github Action [Untested] [HELP NEEDED]
 
 ### Misc. Devices
 Dreamcast - [Untested]
