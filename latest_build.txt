@@ -1,7 +1,7 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/87d4d84107ceb11c1a7145f09fca2ddb6e64f883
+https://github.com/UnknownShadow200/ClassiCube/commit/07d2438d5a9562ae32d6dd5a09f8964ca82ca4dc
 
-Nintendo 64 port somewhat works
-Nov 16, 2023
+Majorly unfinished PS2 port
+Nov 17, 2023
 
 Release 1.3.6 Build
 
