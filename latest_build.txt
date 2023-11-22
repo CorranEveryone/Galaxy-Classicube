@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/07d2438d5a9562ae32d6dd5a09f8964ca82ca4dc
+https://github.com/UnknownShadow200/ClassiCube/commit/b437554fa7ea706dc51dcad38f8590bea604c231
 
-Majorly unfinished PS2 port
+PS2: Launcher drawing somewhat works
 Nov 17, 2023
 
 Release 1.3.6 Build
