@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/39b09a9202355fdc5e7950f6415e37263f3c6923
+https://github.com/UnknownShadow200/ClassiCube/commit/27d195ef3988d07de7660b05cf4a9908d1d5dfbd
 
-Simplify altering default builtin colours, and loading options representing colours
+Add a few more reference comments to Vorbis decoder
 Nov 19, 2023
 
 Release 1.3.6 Build
