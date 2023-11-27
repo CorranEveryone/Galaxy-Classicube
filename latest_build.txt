@@ -1,7 +1,7 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/911df3d1cabe274c0b0694468e9541f23238d2de
+https://github.com/UnknownShadow200/ClassiCube/commit/9e4fc869ad043e3ee5ea8098c3ec5131c2999efb
 
-Allow modifying selected block outline appearance
-Nov 20, 2023 [1/3]
+Make generation screen somewhat usable with controller input
+Nov 20, 2023
 
 Release 1.3.6 Build
 
