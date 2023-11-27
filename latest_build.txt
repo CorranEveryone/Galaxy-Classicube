@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/c82364f88634b1766af0cf859e307e4fb55d931a
+https://github.com/UnknownShadow200/ClassiCube/commit/911df3d1cabe274c0b0694468e9541f23238d2de
 
-Support dividing the notchy map generator into separate steps, so that they can be interwoven with periodically switching back to the game thread on systems that don't support preemptive multitasking
+Allow modifying selected block outline appearance
 Nov 20, 2023 [1/3]
 
 Release 1.3.6 Build
