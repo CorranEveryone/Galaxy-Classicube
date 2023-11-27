@@ -1,6 +1,6 @@
-https://github.com/UnknownShadow200/ClassiCube/commit/3adc437dbe100c4067c3b62a144ddb80fe7392be
+https://github.com/UnknownShadow200/ClassiCube/commit/7bbfd61f6387de26478fd12d357efe9ba112ce99
 
-Make map generation a bit more flexible
+Make Xbox 360 port compile at least
 Nov 18, 2023
 
 Release 1.3.6 Build
