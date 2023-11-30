@@ -47,9 +47,14 @@ Wii/GameCube - [Untested]
 
 N64 - No Github Action [Untested] [HELP NEEDED]
 
-### Misc. Devices
+### Xbox
+Xbox One/Series X - [Untested]
+
+Xbox 360 - No Github Action [Untested] [HELP NEEDED]
+
+### Misc.
+Web - No Github Action [Untested] [HELP NEEDED]
+
 Dreamcast - [Untested]
 
 Haiku - [Untested]
-
-Xbox - [Untested]
