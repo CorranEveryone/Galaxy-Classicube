@@ -1,8 +1,8 @@
-name: Wii/GameCube
+name: GameCube
 on: [push]
 
 concurrency:
-  group: ${{ github.ref }}-wiigc
+  group: ${{ github.ref }}-gc
   cancel-in-progress: true
 
 jobs:
