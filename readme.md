@@ -15,7 +15,7 @@ Windows x32 - Missing 2 dll files [HELP NEEDED]
 ### MacOS
 MacOS x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
-MacOS x32 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
+MacOS x32 - Build Doesn't Work
 
 ### Mobile
 iOS - No Github Action [Untested] [HELP NEEDED]
@@ -25,7 +25,7 @@ Android - No Github Action [Untested] [HELP NEEDED]
 ### Ubuntu Linux
 Ubuntu Linux x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
-Ubuntu Linux x32 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
+Ubuntu Linux x32 - Build Doesn't Work
 
 Ubuntu Windows x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
@@ -36,7 +36,7 @@ PSP - [Untested]
 
 PS Vita - [Untested]
 
-PS3 - Build Doesn't Work (Same for Vanilla Classicube) [Untested]
+PS3 - Build Doesn't Work
 
 PS2 - No Github Action [Untested] [HELP NEEDED]
 
