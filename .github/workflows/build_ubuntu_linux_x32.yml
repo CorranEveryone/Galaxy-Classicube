@@ -36,5 +36,5 @@ jobs:
 
       - uses: ./.github/actions/upload_build
         with:
-          SOURCE_FILE: 'ClassiCube.tar.gz'
-          DEST_NAME: 'ClassiCube.tar.gz'
+          SOURCE_FILE: 'ClassiCube'
+          DEST_NAME: 'ClassiCube'
