@@ -25,4 +25,4 @@ jobs:
       - uses: ./.github/actions/upload_build
         with:
           SOURCE_FILE: 'ClassiCube'
-          DEST_NAME: 'ClassiCube.app'
+          DEST_NAME: 'ClassiCube.tar.gz'
