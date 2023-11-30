@@ -1,4 +1,4 @@
-name: Build latest (Windows x32)
+name: Windows x32
 
 on: [push, pull_request]
 

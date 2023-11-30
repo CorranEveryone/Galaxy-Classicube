@@ -1,4 +1,4 @@
-name: Build latest (3DS)
+name: 3DS
 on: [push]
 
 concurrency:

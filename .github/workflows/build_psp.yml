@@ -1,4 +1,4 @@
-name: Build latest (PSP)
+name: PSP
 on: [push]
 
 concurrency:

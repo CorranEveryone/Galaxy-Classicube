@@ -1,4 +1,4 @@
-name: Build latest (Ubuntu Linux x64)
+name: Ubuntu Linux x64
 
 on: [push, pull_request]
 

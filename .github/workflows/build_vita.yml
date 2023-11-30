@@ -1,4 +1,4 @@
-name: Build latest (Vita)
+name: Vita
 on: [push]
 
 concurrency:

@@ -1,4 +1,4 @@
-name: Build latest (Xbox)
+name: Xbox
 on: [push]
 
 concurrency:

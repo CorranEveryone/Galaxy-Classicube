@@ -1,4 +1,4 @@
-name: Build latest (Haiku)
+name: Haiku
 on: [push]
 
 concurrency:

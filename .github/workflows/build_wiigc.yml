@@ -1,4 +1,4 @@
-name: Build latest (Wii/GameCube)
+name: Wii/GameCube
 on: [push]
 
 concurrency:

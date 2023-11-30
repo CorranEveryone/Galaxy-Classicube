@@ -1,4 +1,4 @@
-name: Build latest (Dreamcast)
+name: Dreamcast
 on: [push]
 
 concurrency:

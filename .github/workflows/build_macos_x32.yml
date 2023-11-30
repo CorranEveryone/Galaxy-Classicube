@@ -1,4 +1,4 @@
-name: Build latest (MacOS x32)
+name: MacOS x32
 
 on: [push, pull_request]
 

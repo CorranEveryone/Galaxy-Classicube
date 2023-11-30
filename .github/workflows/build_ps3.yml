@@ -1,4 +1,4 @@
-name: Build latest (PS3)
+name: PS3
 on: [push]
 
 concurrency:
