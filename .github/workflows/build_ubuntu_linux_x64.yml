@@ -32,3 +32,8 @@ jobs:
         if: matrix.config.plat == 'Linux' && matrix.config.bits == 64
         run: |
           make linux
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'ClassiCube.tar.gz'
+          DEST_NAME: 'ClassiCube.tar.gz'

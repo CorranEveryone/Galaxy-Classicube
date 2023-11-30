@@ -27,9 +27,9 @@ Ubuntu Linux x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
 
 Ubuntu Linux x32 - Build Doesn't Work
 
-Ubuntu Windows x64 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
+Ubuntu Windows x64 - [Untested]
 
-Ubuntu Windows x32 - Currently Creating No Artifacts [Untested] [HELP NEEDED]
+Ubuntu Windows x32 - [Untested]
 
 ### PlayStations Devices
 PSP - [Untested]

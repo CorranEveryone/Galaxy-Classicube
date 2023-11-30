@@ -33,3 +33,8 @@ jobs:
         run: |
           # Note, this overwrites the previous flags
           make linux CFLAGS="-m32" LDFLAGS="-m32"
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'ClassiCube.tar.gz'
+          DEST_NAME: 'ClassiCube.tar.gz'
