@@ -11,7 +11,7 @@ I will show screenshots soon. (If I can get windows builds working)
 [![Build latest (Windows x64)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_windows_x64.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_windows_x64.yml)
 Missing 2 dll files [HELP NEEDED]
 
-[![Build latest (Wii/GameCube)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_wiigc.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_wiigc.yml)
+[![Build latest (Wii/GameCube)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_windows_x32.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_wiigc.yml)
 Missing 2 dll files [HELP NEEDED]
 
 ### MacOS
