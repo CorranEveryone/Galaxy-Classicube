@@ -41,7 +41,7 @@ PS3 - Build Doesn't Work
 PS2 - No Github Action [Untested] [HELP NEEDED]
 
 ### Nintendo Devices
-3DS - [Untested]
+[![Build latest (3DS)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_3ds.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_3ds.yml)[Untested]
 
 Wii/GameCube - [Untested]
 
