@@ -32,3 +32,8 @@ jobs:
         if: matrix.config.plat == 'Windows' && matrix.config.bits == 64
         run: |
           make mingw CC="x86_64-w64-mingw32-gcc"
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'src\ClassiCube.exe'
+          DEST_NAME: 'ClassiCube.exe'
