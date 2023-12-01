@@ -34,7 +34,6 @@ Currently Creating No Artifacts [Untested] [HELP NEEDED]
 [![Ubuntu Linux x32](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_linux_x32.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_linux_x32.yml)
 
 [![Ubuntu Windows x64](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_windows_x64.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_windows_x64.yml)
-[Untested]
 
 [![Ubuntu Windows x32](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_windows_x32.yml/badge.svg)](https://github.com/CorranEveryone/Galaxy-Classicube/actions/workflows/build_ubuntu_windows_x32.yml)
 [Untested]
