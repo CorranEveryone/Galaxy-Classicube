@@ -20,7 +20,7 @@
 #include <dma.h>
 #include <graph.h>
 #include <draw.h>
-#include <draw3d.h>
+#include <kernel.h>
 
 static cc_bool launcherMode;
 static char padBuf[256] __attribute__((aligned(64)));
@@ -120,14 +120,16 @@ static void HandleButtons(int buttons) {
 }
 
 static void HandleJoystick_Left(int x, int y) {
+	//Platform_Log2("LEFT: %i, %i", &x, &y);
 	if (Math_AbsI(x) <= 8) x = 0;
-	if (Math_AbsI(y) <= 8) y = 0;	
+	if (Math_AbsI(y) <= 8) y = 0;
 	
 	if (x == 0 && y == 0) return;
 	Input.JoystickMovement = true;
 	Input.JoystickAngle    = Math_Atan2(x, -y);
 }
 static void HandleJoystick_Right(int x, int y, double delta) {
+	//Platform_Log2("Right: %i, %i", &x, &y);
 	float scale = (delta * 60.0) / 16.0f;
 	
 	if (Math_AbsI(x) <= 8) x = 0;
@@ -142,6 +144,7 @@ static void ProcessPadInput(double delta, struct padButtonStatus* pad) {
 	HandleJoystick_Right(pad->rjoy_h - 0x80, pad->rjoy_v - 0x80, delta);
 }
 
+static cc_bool setMode;
 void Window_ProcessEvents(double delta) {
     struct padButtonStatus pad;
 	Input.JoystickMovement = false;
@@ -149,9 +152,14 @@ void Window_ProcessEvents(double delta) {
 	int state = padGetState(0, 0);
     if (state != PAD_STATE_STABLE) return;
     
+    // Change to DUALSHOCK mode so analog joysticks return values
+    if (!setMode) { 
+    	padSetMainMode(0, 0, PAD_MMODE_DUALSHOCK, PAD_MMODE_LOCK); 
+    	setMode = true;
+    }
+    
 	int ret = padRead(0, 0, &pad);
-	if (ret == 0) return;
-	ProcessPadInput(delta, &pad);
+	if (ret != 0) ProcessPadInput(delta, &pad);
 }
 
 void Cursor_SetPosition(int x, int y) { } // Makes no sense for PS Vita
@@ -186,6 +194,10 @@ void Window_AllocFramebuffer(struct Bitmap* bmp) {
 }
 
 void Window_DrawFramebuffer(Rect2D r) {
+	// FlushCache bios call https://psi-rockin.github.io/ps2tek/
+	//   mode=0: Flush data cache (invalidate+writeback dirty contents to memory)
+	FlushCache(0);
+	
 	packet_t* packet = packet_init(50,PACKET_NORMAL);
 	qword_t* q = packet->data;
 
