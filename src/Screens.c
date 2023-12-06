@@ -93,20 +93,20 @@ static void HUDScreen_RemakeLine1(struct HUDScreen* s) {
 	if (!Gui.ShowFPS && s->line1.tex.ID) return;
 
 	fps = s->accumulator == 0 ? 1 : (int)(s->frames / s->accumulator);
-	String_Format1(&status, "&dGalaxy &7Classi&fCube &f| &e%i &6fps", &fps);
+	String_Format1(&status, "%i fps, ", &fps);
 
 	if (Game_ClassicMode) {
-		String_Format1(&status, " &f| &b%i &3chunk updates", &Game.ChunkUpdates);
+		String_Format1(&status, "%i chunk updates", &Game.ChunkUpdates);
 	} else {
 		if (Game.ChunkUpdates) {
-			String_Format1(&status, " &f| &b%i &3chunks/s", &Game.ChunkUpdates);
+			String_Format1(&status, "%i chunks/s, ", &Game.ChunkUpdates);
 		}
 
 		indices = ICOUNT(Game_Vertices);
-		String_Format1(&status, " &f| &c%i &4vertices", &indices);
+		String_Format1(&status, "%i vertices", &indices);
 
 		ping = Ping_AveragePingMS();
-		if (ping) String_Format1(&status, " &f| &2ping &a%i &2ms", &ping);
+		if (ping) String_Format1(&status, ", ping %i ms", &ping);
 	}
 	TextWidget_Set(&s->line1, &status, &s->font);
 	s->dirty = true;
@@ -120,7 +120,7 @@ static void HUDScreen_BuildPosition(struct HUDScreen* s, struct VertexTextured* 
 
 	/* Make "Position: " prefix */
 	tex = atlas->tex; 
-	tex.X     = 2 + DisplayInfo.ContentOffset;
+	tex.X     = 2 + DisplayInfo.ContentOffsetX;
 	tex.Width = atlas->offset;
 	Gfx_Make2DQuad(&tex, PACKEDCOL_WHITE, &cur);
 
@@ -162,12 +162,12 @@ static void HUDScreen_RemakeLine2(struct HUDScreen* s) {
 
 	String_InitArray(status, statusBuffer);
 	if (Camera.Fov != Camera.DefaultFov) {
-		String_Format1(&status, "&2[&aZoom fov %i&2] ", &Camera.Fov);
+		String_Format1(&status, "Zoom fov %i  ", &Camera.Fov);
 	}
 
-	if (hacks->Flying) String_AppendConst(&status, "&3[&bFlying&3] ");
-	if (speed)         String_Format1(&status, "&6[&eSpeed %f1x&6] ", &speed);
-	if (hacks->Noclip) String_AppendConst(&status, "&4[&cNoclip&4] ");
+	if (hacks->Flying) String_AppendConst(&status, "Fly ON   ");
+	if (speed)         String_Format1(&status, "Speed %f1x   ", &speed);
+	if (hacks->Noclip) String_AppendConst(&status, "Noclip ON   ");
 
 	TextWidget_Set(&s->line2, &status, &s->font);
 }
@@ -186,7 +186,7 @@ static void HUDScreen_ContextLost(void* screen) {
 
 static void HUDScreen_ContextRecreated(void* screen) {	
 	static const cc_string chars  = String_FromConst("0123456789-, ()");
-	static const cc_string prefix = String_FromConst("&c&a&b&dPosition&f: ");
+	static const cc_string prefix = String_FromConst("Position: ");
 
 	struct HUDScreen* s = (struct HUDScreen*)screen;
 	Screen_UpdateVb(s);
@@ -214,11 +214,11 @@ static void HUDScreen_Layout(void* screen) {
 	int posY;
 
 	Widget_SetLocation(line1, ANCHOR_MIN, ANCHOR_MIN, 
-						2 + DisplayInfo.ContentOffset, 2 + DisplayInfo.ContentOffset);
+						2 + DisplayInfo.ContentOffsetX, 2 + DisplayInfo.ContentOffsetY);
 	posY = line1->y + line1->height;
 	s->posAtlas.tex.Y = posY;
 	Widget_SetLocation(line2, ANCHOR_MIN, ANCHOR_MIN, 
-						2 + DisplayInfo.ContentOffset, 0);
+						2 + DisplayInfo.ContentOffsetX, 0);
 
 	if (Game_ClassicMode) {
 		/* Swap around so 0.30 version is at top */
