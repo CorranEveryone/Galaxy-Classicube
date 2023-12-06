@@ -1,0 +1,31 @@
+name: Android
+
+on: [push, pull_request]
+
+jobs:
+  build_on_android:
+    name: Android
+    runs-on: android-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - { plat: "Android"}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      # Build
+      - name: Android
+        run: |
+          cd android
+          gradlew.bat
+
+      - uses: ./.github/actions/upload_build
+        with:
+          SOURCE_FILE: 'src\x64\Debug\ClassiCube.exe'
+          DEST_NAME: 'ClassiCube.exe'

@@ -96,7 +96,7 @@ public class CCFileProvider extends ContentProvider
         // See AndroidManifest.xml for authority
         return new Uri.Builder()
                 .scheme("content")
-                .authority("com.classicube.android.client.provider")
+                .authority("com.galaxyclassicube.android.client.provider")
                 .encodedPath(Uri.encode(path, "/"))
                 .build();
     }
