@@ -7,7 +7,6 @@
 #include <libdragon.h>
 #include <GL/gl.h>
 #include <GL/gl_integration.h>
-#include <GL/gl.h>
 
 typedef void (*GL_SetupVBFunc)(void);
 typedef void (*GL_SetupVBRangeFunc)(int startVertex);
@@ -29,8 +28,9 @@ void Gfx_Create(void) {
     //rdpq_debug_log(true);
     zbuffer = surface_alloc(FMT_RGBA16, display_get_width(), display_get_height());
     
-	Gfx.MaxTexWidth  = 32;
-	Gfx.MaxTexHeight = 32;
+	Gfx.MaxTexWidth  = 128;
+	Gfx.MaxTexHeight = 128;
+	Gfx.MaxTexSize   = 1024; // TMEM only has 4 KB in it
 	Gfx.Created      = true;
 
 	Gfx_RestoreState();
@@ -62,7 +62,7 @@ void Gfx_GetApiInfo(cc_string* info) {
 	String_AppendConst(info, "-- Using Nintendo 64 --\n");
 	String_AppendConst(info, "GPU: Nintendo 64 RDP (LibDragon OpenGL)\n");
 	String_AppendConst(info, "T&L: Nintendo 64 RSP (LibDragon OpenGL)\n");
-	String_Format2(info,     "Max texture size: (%i, %i)\n", &Gfx.MaxTexWidth, &Gfx.MaxTexHeight);
+	PrintMaxTextureInfo(info);
 }
 
 void Gfx_SetFpsLimit(cc_bool vsync, float minFrameMs) {
@@ -121,8 +121,6 @@ typedef struct CCTexture {
 } CCTexture;
 
 static GfxResourceID Gfx_AllocTexture(struct Bitmap* bmp, cc_uint8 flags, cc_bool mipmaps) {
-	if (bmp->width > 32 || bmp->height > 32) return NULL;
-
 	CCTexture* tex = Mem_Alloc(1, sizeof(CCTexture), "texture");
 	
 	glGenTextures(1, &tex->textureID);
@@ -221,7 +219,7 @@ static void Gfx_RestoreState(void) {
 	glHint(GL_FOG_HINT, GL_NICEST);
 	glAlphaFunc(GL_GREATER, 0.5f);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glDepthFunc(GL_LESS);
+	glDepthFunc(GL_LESS_INTERPENETRATING_N64);
 	//glEnable(GL_RDPQ_TEXTURING_N64);
 }
 
